@@ -37,10 +37,11 @@
 			background-color: #000000 !important;
 			background: #000000 !important;
 		}
-		.main-menu > ul > li > a, .main-menu > ul > li.active > a, .main-menu > ul > li:hover > a {
-			color: #ffffff !important;
-			background-color: transparent !important;
-			background: transparent !important;
+		@media only screen and (min-width: 992px) {
+			.main-menu > ul > li > a, .main-menu > ul > li.active > a, .main-menu > ul > li:hover > a {
+				color: #ffffff !important;
+				background-color: transparent !important;
+			}
 		}
 		ul#tools_top li a.search-overlay-menu-btn {
 			color: #ffffff !important;

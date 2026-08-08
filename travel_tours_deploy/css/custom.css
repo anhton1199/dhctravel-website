@@ -251,15 +251,34 @@ header.sticky,
 	border-bottom: 1px solid #222222 !important;
 }
 
-.main-menu > ul > li > a,
-.main-menu > ul > li.active > a {
-	color: #ffffff !important;
-	background-color: transparent !important;
+@media only screen and (min-width: 992px) {
+	.main-menu > ul > li > a,
+	.main-menu > ul > li.active > a,
+	.main-menu > ul > li:hover > a {
+		color: #ffffff !important;
+		background-color: transparent !important;
+	}
 }
 
-.main-menu > ul > li:hover > a {
-	color: #ffffff !important;
-	background-color: transparent !important;
+@media only screen and (max-width: 991px) {
+	#header_menu {
+		background-color: #cc0066 !important;
+		background-image: url(../img/pattern_3.png) !important;
+		padding: 25px 15px !important;
+		text-align: center !important;
+	}
+	.main-menu ul li a {
+		color: #555555 !important;
+		background-color: transparent !important;
+	}
+	.main-menu ul li.submenu > a {
+		color: #555555 !important;
+		background: url(../img/arrow_down_menu.svg) no-repeat center right 15px !important;
+	}
+	.main-menu ul li.active > a {
+		color: #cc0066 !important;
+		font-weight: 500 !important;
+	}
 }
 
 ul#tools_top li a.search-overlay-menu-btn {
