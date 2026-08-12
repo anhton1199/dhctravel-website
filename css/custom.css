@@ -370,6 +370,36 @@ a.logo_link .company_name,
 	}
 }
 
+/* Ensure Header Bar & Navigation stay on 1 single row on desktop */
+@media only screen and (min-width: 992px) {
+	header .container > .row {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+	}
+	header nav {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: flex-end !important;
+	}
+	.main-menu {
+		float: none !important;
+		display: inline-block !important;
+	}
+	.main-menu > ul {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		align-items: center !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.main-menu > ul > li > a {
+		padding: 20px 10px !important;
+		white-space: nowrap !important;
+	}
+}
+
+
 
 
 
