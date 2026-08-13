@@ -415,6 +415,69 @@ a.logo_link .company_name,
 	}
 }
 
+/* Topbar WhatsApp Link Styling */
+ul#top_links {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 16px !important;
+	float: right !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+}
+
+ul#top_links li {
+	display: inline-flex !important;
+	align-items: center !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+a#whatsapp_link {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	font-size: 11px !important;
+	text-decoration: none !important;
+	transition: opacity 0.2s ease, color 0.2s ease !important;
+}
+
+a#whatsapp_link:hover {
+	color: #25D366 !important;
+	opacity: 0.9 !important;
+}
+
+a#whatsapp_link img.whatsapp_icon {
+	width: 16px !important;
+	height: 16px !important;
+	display: inline-block !important;
+	vertical-align: middle !important;
+	border-radius: 3px !important;
+}
+
+@media only screen and (max-width: 767px) {
+	#top_line .row {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+	}
+	#top_line .hidden-xs {
+		display: block !important;
+	}
+	#opening {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	a#whatsapp_link span.wa_text {
+		display: none !important;
+	}
+}
+
+
 
 
 
