@@ -298,42 +298,78 @@ header .cmn-toggle-switch span::after {
 	background-color: #ffffff !important;
 }
 
-/* Logo & Company Name with Oswald Light */
+/* =====================================================
+   LOGO & COMPANY NAME — Oswald Light
+   Logo bounding box: aspect-ratio 5/4 (W:H = 5:4)
+   ===================================================== */
+
+/* H1 wrapper: no extra spacing */
 #logo_home h1 {
 	margin: 0 !important;
 	padding: 0 !important;
 	line-height: 1 !important;
 }
 
+/* Logo anchor = outer flex row (logo-box + brand name) */
 #logo_home h1 a,
 a.logo_link {
-	width: auto !important;
-	height: auto !important;
-	min-height: 41px;
 	display: inline-flex !important;
 	align-items: center !important;
 	gap: 12px !important;
 	text-indent: 0 !important;
 	background-image: none !important;
 	text-decoration: none !important;
-	padding: 4px 0 !important;
-}
-
-#logo_home h1 a img,
-#logo_home h1 a .logo_img,
-#logo {
-	height: 38px !important;
+	padding: 0 !important;
+	height: auto !important;
 	width: auto !important;
-	display: inline-block !important;
-	vertical-align: middle !important;
-	margin: 0 !important;
 }
 
+/* ── Logo Bounding Box (aspect-ratio 5/4) ── */
+#logo_home h1 a .logo_bbox {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	aspect-ratio: 5 / 4 !important;
+	height: 48px !important;          /* desktop: chiều cao cố định */
+	width: auto !important;           /* chiều rộng tự tính: 48×(5/4)=60px */
+	overflow: hidden !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	flex-shrink: 0 !important;
+}
+
+/* ── Logo <img> bên trong bounding box ── */
+#logo_home h1 a .logo_bbox img,
+#logo_home h1 a .logo_bbox .logo_img,
+#logo_home h1 a .logo_bbox #logo {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: contain !important;
+	object-position: center !important;
+	flex-shrink: 0 !important;
+	margin: 0 !important;
+	display: block !important;
+}
+
+/* Fallback: img trực tiếp trong <a> (không có .logo_bbox) */
+#logo_home h1 a > img:not(.logo_bbox img),
+#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
+	height: 48px !important;
+	width: auto !important;
+	aspect-ratio: 5 / 4 !important;
+	object-fit: contain !important;
+	object-position: center !important;
+	flex-shrink: 0 !important;
+	margin: 0 !important;
+	display: block !important;
+}
+
+/* ── Brand Name Typography ── */
 #logo_home h1 a .company_name,
 a.logo_link .company_name,
 .logo_title {
 	font-family: 'Oswald', sans-serif !important;
-	font-weight: 300 !important; /* Oswald Light */
+	font-weight: 300 !important;
 	font-size: 20px !important;
 	color: #ffffff !important;
 	text-transform: uppercase !important;
@@ -344,39 +380,51 @@ a.logo_link .company_name,
 	vertical-align: middle !important;
 }
 
+/* =====================================================
+   RESPONSIVE — MOBILE (≤ 767px)
+   Header row = flexbox, icons pinned right
+   ===================================================== */
 @media only screen and (max-width: 767px) {
-	/* Make header row a flexbox so logo + nav stay on one line */
+
+	/* Header row: single-line flex, no wrap */
 	header .container > .row {
 		display: flex !important;
 		align-items: center !important;
 		justify-content: space-between !important;
 		flex-wrap: nowrap !important;
 	}
-	/* Logo column: shrinks but never overflows into nav area */
+
+	/* Logo column: grows/shrinks, clips before hitting nav */
 	header .container > .row > .col-xs-9 {
 		flex: 1 1 auto !important;
 		min-width: 0 !important;
 		padding-right: 0 !important;
 	}
-	/* Nav/icon column: fixed width on right, never shrinks */
+
+	/* Nav/icon column: fixed right, never shrinks */
 	header .container > .row > nav.col-xs-3 {
 		flex: 0 0 auto !important;
 		width: auto !important;
 		padding-left: 8px !important;
 	}
-	/* Logo anchor: flex row, gap tightened */
+
+	/* Logo anchor gap */
 	#logo_home h1 a {
-		gap: 6px !important;
+		gap: 8px !important;
 	}
-	/* Logo image: smaller on mobile */
-	#logo_home h1 a img,
-	#logo_home h1 a .logo_img,
-	#logo {
-		height: 35px !important;
-		width: auto !important;
-		flex-shrink: 0 !important;
+
+	/* Logo bounding box on mobile (≤767px) */
+	#logo_home h1 a .logo_bbox {
+		height: 36px !important;        /* 36×(5/4) = 45px wide */
 	}
-	/* Brand name: shrinks gracefully, truncates if needed */
+
+	/* Fallback img */
+	#logo_home h1 a > img:not(.logo_bbox img),
+	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
+		height: 36px !important;
+	}
+
+	/* Brand name */
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
 	.logo_title {
@@ -391,15 +439,17 @@ a.logo_link .company_name,
 	}
 }
 
+/* ── Small phones (≤ 480px) ── */
 @media only screen and (max-width: 480px) {
-	/* Extra tight on small phones */
 	#logo_home h1 a {
-		gap: 4px !important;
+		gap: 5px !important;
 	}
-	#logo_home h1 a img,
-	#logo_home h1 a .logo_img,
-	#logo {
-		height: 30px !important;
+	#logo_home h1 a .logo_bbox {
+		height: 32px !important;        /* 32×(5/4) = 40px wide */
+	}
+	#logo_home h1 a > img:not(.logo_bbox img),
+	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
+		height: 32px !important;
 	}
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
@@ -409,12 +459,17 @@ a.logo_link .company_name,
 	}
 }
 
+/* ── Very small (≤ 360px / 320px) ── */
 @media only screen and (max-width: 360px) {
-	/* Very small devices (320px–360px): tightest settings */
-	#logo_home h1 a img,
-	#logo_home h1 a .logo_img,
-	#logo {
-		height: 26px !important;
+	#logo_home h1 a {
+		gap: 4px !important;
+	}
+	#logo_home h1 a .logo_bbox {
+		height: 28px !important;        /* 28×(5/4) = 35px wide */
+	}
+	#logo_home h1 a > img:not(.logo_bbox img),
+	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
+		height: 28px !important;
 	}
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
