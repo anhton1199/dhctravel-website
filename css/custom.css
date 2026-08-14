@@ -558,7 +558,9 @@ a#whatsapp_link img.whatsapp_icon {
 	a.logo_link .company_name,
 	.logo_title {
 		font-size: 12px !important;
-		margin-top: 2px !important;
+		margin-top: 0 !important;
+		align-self: flex-start !important;
+		vertical-align: top !important;
 	}
 	#logo_home h1 a .logo_bbox,
 	#header_menu img {
