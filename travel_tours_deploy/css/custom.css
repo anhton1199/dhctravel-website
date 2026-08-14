@@ -269,6 +269,10 @@ header.sticky,
 		padding: 25px 15px !important;
 		text-align: center !important;
 	}
+	#header_menu img {
+		width: 60px !important;
+		height: 48px !important;
+	}
 	.main-menu ul li a {
 		color: #555555 !important;
 		background-color: transparent !important;
