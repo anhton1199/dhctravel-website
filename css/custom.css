@@ -441,8 +441,8 @@ a.logo_link .company_name,
 	}
 }
 
-/* Header Desktop (>= 768px): nav inline + search icon at far right */
-@media only screen and (min-width: 768px) {
+/* Header Desktop (>= 1200px): nav inline + search icon at far right */
+@media only screen and (min-width: 1200px) {
 	header .container > .row {
 		display: flex !important;
 		align-items: center !important;
