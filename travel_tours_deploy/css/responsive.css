@@ -52,7 +52,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
 	ul#tools_top {
 		margin-right: 45px;
 		margin-top: 13px;

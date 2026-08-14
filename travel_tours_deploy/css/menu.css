@@ -54,7 +54,7 @@ a.dropdown-toggle.icon-search{display: inline-block;}
 		
 /* All styles for screen size over 992px
 ================================================== */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
 	
 .main-menu {width: auto;}
 .main-menu a {white-space: nowrap;}	
@@ -111,12 +111,12 @@ a#search_bt span{ display:none;}
 
 /* All styles for screen size between 992px and 1200px
 ================================================== */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 /*Megamenu width*/			
 .main-menu ul li.megamenu .menu-wrapper {width:940px;}
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
 	
 #header_menu{text-align:center;padding:25px 15px 25px 15px;position:relative;display:block; background:#65318f url(../img/pattern_3.png) repeat;}
 

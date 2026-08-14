@@ -381,8 +381,9 @@ a.logo_link .company_name,
 }
 
 /* =====================================================
-   RESPONSIVE — MOBILE (≤ 767px)
+   RESPONSIVE — MOBILE (< 768px)
    Header row = flexbox, icons pinned right
+   Logo & Brand name GIỮ NGUYÊN kích thước desktop
    ===================================================== */
 @media only screen and (max-width: 767px) {
 
@@ -394,93 +395,54 @@ a.logo_link .company_name,
 		flex-wrap: nowrap !important;
 	}
 
-	/* Logo column: grows/shrinks, clips before hitting nav */
+	/* Logo column: grows, min-width:0 để không overflow */
 	header .container > .row > .col-xs-9 {
 		flex: 1 1 auto !important;
 		min-width: 0 !important;
 		padding-right: 0 !important;
 	}
 
-	/* Nav/icon column: fixed right, never shrinks */
+	/* Nav/icon column: cố định bên phải */
 	header .container > .row > nav.col-xs-3 {
 		flex: 0 0 auto !important;
 		width: auto !important;
 		padding-left: 8px !important;
 	}
 
-	/* Logo anchor gap */
+	/* Logo anchor: giữ gap gốc 12px */
 	#logo_home h1 a {
-		gap: 8px !important;
+		gap: 12px !important;
 	}
 
-	/* Logo bounding box on mobile (≤767px) */
+	/* Logo bounding box: GIỮ NGUYÊN kích thước desktop */
 	#logo_home h1 a .logo_bbox {
-		height: 36px !important;        /* 36×(5/4) = 45px wide */
+		height: 48px !important;
+		aspect-ratio: 5 / 4 !important;
+		width: auto !important;
 	}
 
-	/* Fallback img */
+	/* Fallback img: GIỮ NGUYÊN kích thước desktop */
 	#logo_home h1 a > img:not(.logo_bbox img),
 	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
-		height: 36px !important;
+		height: 48px !important;
+		aspect-ratio: 5 / 4 !important;
+		width: auto !important;
 	}
 
-	/* Brand name */
+	/* Brand name: GIỮ NGUYÊN kích thước desktop */
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
 	.logo_title {
-		flex: 1 1 auto !important;
-		min-width: 0 !important;
-		font-size: 10.5px !important;
-		letter-spacing: 0.5px !important;
-		line-height: 1.2 !important;
+		font-size: 20px !important;
+		letter-spacing: 1.2px !important;
 		white-space: nowrap !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
+		overflow: visible !important;
+		text-overflow: clip !important;
 	}
 }
 
-/* ── Small phones (≤ 480px) ── */
-@media only screen and (max-width: 480px) {
-	#logo_home h1 a {
-		gap: 5px !important;
-	}
-	#logo_home h1 a .logo_bbox {
-		height: 32px !important;        /* 32×(5/4) = 40px wide */
-	}
-	#logo_home h1 a > img:not(.logo_bbox img),
-	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
-		height: 32px !important;
-	}
-	#logo_home h1 a .company_name,
-	a.logo_link .company_name,
-	.logo_title {
-		font-size: 9.5px !important;
-		letter-spacing: 0.3px !important;
-	}
-}
-
-/* ── Very small (≤ 360px / 320px) ── */
-@media only screen and (max-width: 360px) {
-	#logo_home h1 a {
-		gap: 4px !important;
-	}
-	#logo_home h1 a .logo_bbox {
-		height: 28px !important;        /* 28×(5/4) = 35px wide */
-	}
-	#logo_home h1 a > img:not(.logo_bbox img),
-	#logo_home h1 a > .logo_img:not(.logo_bbox .logo_img) {
-		height: 28px !important;
-	}
-	#logo_home h1 a .company_name,
-	a.logo_link .company_name,
-	.logo_title {
-		font-size: 8.5px !important;
-		letter-spacing: 0.2px !important;
-	}
-}
-
-/* Ensure Header Bar & Navigation stay on 1 single row on desktop with Search Icon at far right */
-@media only screen and (min-width: 992px) {
+/* Header Desktop (>= 768px): nav inline + search icon at far right */
+@media only screen and (min-width: 768px) {
 	header .container > .row {
 		display: flex !important;
 		align-items: center !important;
