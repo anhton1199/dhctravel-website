@@ -560,7 +560,8 @@ a#whatsapp_link img.whatsapp_icon {
 		font-size: 12px !important;
 		margin-top: 2px !important;
 	}
-	#logo_home h1 a .logo_bbox {
+	#logo_home h1 a .logo_bbox,
+	#header_menu img {
 		margin-top: 3px !important;
 	}
 }
