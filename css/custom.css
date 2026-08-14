@@ -575,16 +575,17 @@ a#whatsapp_link img.whatsapp_icon {
 		margin-top: 0 !important;
 		align-self: flex-start !important;
 		vertical-align: top !important;
+		line-height: 1.6 !important;
 	}
 	.logo_sub1 {
 		display: block !important;
 		font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif !important;
 		font-weight: 500 !important;
-		font-size: 8px !important;
+		font-size: 10px !important;
 		color: #ffffff !important;
 		text-transform: none !important;
 		letter-spacing: 0.3px !important;
-		line-height: 1.3 !important;
+		line-height: 1.6 !important;
 		white-space: nowrap !important;
 		margin-top: 1px !important;
 	}
@@ -592,11 +593,11 @@ a#whatsapp_link img.whatsapp_icon {
 		display: block !important;
 		font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif !important;
 		font-weight: 300 !important;
-		font-size: 8px !important;
+		font-size: 10px !important;
 		color: #ffffff !important;
 		text-transform: none !important;
 		letter-spacing: 0.3px !important;
-		line-height: 1.3 !important;
+		line-height: 1.6 !important;
 		white-space: nowrap !important;
 		margin-top: 1px !important;
 	}
