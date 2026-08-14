@@ -329,6 +329,20 @@ a.logo_link {
 	transform: translateY(10px) !important;
 }
 
+/* ── Logo Text Group (wraps company_name + sub-lines) ── */
+.logo_text_group {
+	display: inline-flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: center !important;
+}
+
+/* Sub-lines hidden on desktop by default */
+.logo_sub1,
+.logo_sub2 {
+	display: none !important;
+}
+
 /* ── Logo Bounding Box (aspect-ratio 5/4) ── */
 #logo_home h1 a .logo_bbox {
 	display: inline-flex !important;
@@ -561,6 +575,30 @@ a#whatsapp_link img.whatsapp_icon {
 		margin-top: 0 !important;
 		align-self: flex-start !important;
 		vertical-align: top !important;
+	}
+	.logo_sub1 {
+		display: block !important;
+		font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif !important;
+		font-weight: 500 !important;
+		font-size: 8px !important;
+		color: #ffffff !important;
+		text-transform: none !important;
+		letter-spacing: 0.3px !important;
+		line-height: 1.3 !important;
+		white-space: nowrap !important;
+		margin-top: 1px !important;
+	}
+	.logo_sub2 {
+		display: block !important;
+		font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif !important;
+		font-weight: 300 !important;
+		font-size: 8px !important;
+		color: #ffffff !important;
+		text-transform: none !important;
+		letter-spacing: 0.3px !important;
+		line-height: 1.3 !important;
+		white-space: nowrap !important;
+		margin-top: 1px !important;
 	}
 	#logo_home h1 a .logo_bbox,
 	#header_menu img {
