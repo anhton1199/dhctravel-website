@@ -562,6 +562,6 @@ a#whatsapp_link img.whatsapp_icon {
 	}
 	#logo_home h1 a .logo_bbox,
 	#header_menu img {
-		transform: translateY(3px) !important;
+		transform: translateY(1px) !important;
 	}
 }
