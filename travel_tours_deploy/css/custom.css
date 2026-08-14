@@ -554,5 +554,6 @@ a#whatsapp_link img.whatsapp_icon {
 	a.logo_link .company_name,
 	.logo_title {
 		font-size: 12px !important;
+		margin-top: 2px !important;
 	}
 }
