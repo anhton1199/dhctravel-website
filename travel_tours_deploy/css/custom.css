@@ -345,28 +345,82 @@ a.logo_link .company_name,
 }
 
 @media only screen and (max-width: 767px) {
+	/* Make header row a flexbox so logo + nav stay on one line */
+	header .container > .row {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+		flex-wrap: nowrap !important;
+	}
+	/* Logo column: shrinks but never overflows into nav area */
+	header .container > .row > .col-xs-9 {
+		flex: 1 1 auto !important;
+		min-width: 0 !important;
+		padding-right: 0 !important;
+	}
+	/* Nav/icon column: fixed width on right, never shrinks */
+	header .container > .row > nav.col-xs-3 {
+		flex: 0 0 auto !important;
+		width: auto !important;
+		padding-left: 8px !important;
+	}
+	/* Logo anchor: flex row, gap tightened */
+	#logo_home h1 a {
+		gap: 6px !important;
+	}
+	/* Logo image: smaller on mobile */
+	#logo_home h1 a img,
+	#logo_home h1 a .logo_img,
+	#logo {
+		height: 35px !important;
+		width: auto !important;
+		flex-shrink: 0 !important;
+	}
+	/* Brand name: shrinks gracefully, truncates if needed */
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
 	.logo_title {
-		font-size: 16px !important;
-		letter-spacing: 0.8px !important;
+		flex: 1 1 auto !important;
+		min-width: 0 !important;
+		font-size: 10.5px !important;
+		letter-spacing: 0.5px !important;
+		line-height: 1.2 !important;
+		white-space: nowrap !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
 	}
 }
 
 @media only screen and (max-width: 480px) {
+	/* Extra tight on small phones */
 	#logo_home h1 a {
-		gap: 8px !important;
+		gap: 4px !important;
 	}
 	#logo_home h1 a img,
 	#logo_home h1 a .logo_img,
 	#logo {
-		height: 32px !important;
+		height: 30px !important;
 	}
 	#logo_home h1 a .company_name,
 	a.logo_link .company_name,
 	.logo_title {
-		font-size: 13.5px !important;
-		letter-spacing: 0.5px !important;
+		font-size: 9.5px !important;
+		letter-spacing: 0.3px !important;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	/* Very small devices (320px–360px): tightest settings */
+	#logo_home h1 a img,
+	#logo_home h1 a .logo_img,
+	#logo {
+		height: 26px !important;
+	}
+	#logo_home h1 a .company_name,
+	a.logo_link .company_name,
+	.logo_title {
+		font-size: 8.5px !important;
+		letter-spacing: 0.2px !important;
 	}
 }
 
