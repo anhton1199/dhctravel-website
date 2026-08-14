@@ -326,7 +326,7 @@ a.logo_link {
 	padding: 0 !important;
 	height: auto !important;
 	width: auto !important;
-	transform: translateY(3px) !important;
+	transform: translateY(6px) !important;
 }
 
 /* ── Logo Bounding Box (aspect-ratio 5/4) ── */
