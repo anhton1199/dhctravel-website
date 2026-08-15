@@ -613,3 +613,11 @@ a#whatsapp_link img.whatsapp_icon {
 		transform: translateY(5px) !important;
 	}
 }
+
+/* =====================================================
+   HIDE PRICES — all pages
+   ===================================================== */
+.price_grid,
+.price_list {
+	display: none !important;
+}
